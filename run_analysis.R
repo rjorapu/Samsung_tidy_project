@@ -45,7 +45,7 @@
 ## tidy_final is the final dataset with 14220 observations and 4 variables - Activity.Description, Subject, parameter and value
 
 
-setwd("~/Desktop/Coursera/project_get_data")   # set working directory
+## set working directory
 
 ## load required libraries
 library(data.table); library(dplyr); library(tidyr)
@@ -59,22 +59,22 @@ read.table("features.txt", colClasses = "character", col.names = c("No", "featur
 read.table("activity_labels.txt", colClasses = "character", col.names = c("Act.No", "Activity.Description")) -> activity_labels
 
 ## X_train.txt ---> X_train with all variables and column names derived from features
-read.table("~/Desktop/Coursera/project_get_data/train/X_train.txt", col.names = features$features) -> X_train
+read.table("X_train.txt", col.names = features$features) -> X_train
 
 ## subject_train.txt ---> subject_train
-read.table("~/Desktop/Coursera/project_get_data/train/subject_train.txt", col.names = "Subject") -> subject_train
+read.table("subject_train.txt", col.names = "Subject") -> subject_train
 
 ## y_train.txt ----> y_train
-read.table("~/Desktop/Coursera/project_get_data/train/y_train.txt", col.names = "Act.No") -> y_train
+read.table("y_train.txt", col.names = "Act.No") -> y_train
 
 ## X_test.txt ----> X_test with all variables and column names derived from features
-read.table("~/Desktop/Coursera/project_get_data/test/X_test.txt", col.names = features$features) -> X_test
+read.table("X_test.txt", col.names = features$features) -> X_test
 
 ## subject_test.txt ---> subject_test
-read.table("~/Desktop/Coursera/project_get_data/test/subject_test.txt", col.names = "Subject") -> subject_test
+read.table("subject_test.txt", col.names = "Subject") -> subject_test
 
 ## y_test.txt ---> y_test
-read.table("~/Desktop/Coursera/project_get_data/test/y_test.txt", col.names = "Act.No") -> y_test
+read.table("y_test.txt", col.names = "Act.No") -> y_test
 
 ## Combine activity, subject and observation of test (y_test, subject_test and X_test)
 X_test <- cbind(y_test, subject_test, X_test)
