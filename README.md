@@ -1,10 +1,10 @@
 ## Samsung_tidy_project
 #Samsung tidy data project
 I have used the following files :
-Root Directory: features.txt and activity_labels.txt
-Train directory: X_train.txt, y_train.txt and subject_train.txt
-Test Directory: X_test.txt, y_test,txt and subject_test.txt
-I have not used any files in the Inertial Signals directory in both train and test directories
+features.txt and activity_labels.txt
+X_train.txt, y_train.txt and subject_train.txt
+X_test.txt, y_test,txt and subject_test.txt
+I have not used any files in the Inertial Signals directory in the original train and test directories and have not included them in this directory
 
 #Step 0: Read the files into R
 features.txt ---> features : 561 variables with 2 variables - No (character) and features (character)
